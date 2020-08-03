@@ -12,8 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+
 /// The domain for errors originating within `RACCommand`.
-extern NSString * const RACCommandErrorDomain;
+extern NSString * const RACCommandErrorDomain;//RACCommandError_Domain
 
 /// -execute: was invoked while the command was disabled.
 extern const NSInteger RACCommandErrorNotEnabled;
@@ -22,10 +24,12 @@ extern const NSInteger RACCommandErrorNotEnabled;
 /// error originated from.
 ///
 /// This is included only when the error code is `RACCommandErrorNotEnabled`.
-extern NSString * const RACUnderlyingCommandErrorKey;
+extern NSString * const RACUnderlyingCommandErrorKey; //RACUnderlyingCommandErrorKey
+
 
 /// A command is a signal triggered in response to some action, typically
-/// UI-related.
+/// UI-related. 命令是一个信号，在响应某些行为中被出发，如UI-related
+
 @interface RACCommand<__contravariant InputType, __covariant ValueType> : NSObject
 
 /// A signal of the signals returned by successful invocations of -execute:

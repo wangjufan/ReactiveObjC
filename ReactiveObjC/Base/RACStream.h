@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// This class represents a monad, upon which many stream-based operations can
 /// be built.
+//In computer science, functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids state and mutable data. It emphasizes the application of functions, in contrast to the imperative programming style, which emphasizes changes in state. Functional programming has its roots in lambda calculus, a formal system developed in the 1930s to investigate function definition, function application, and recursion. Many functional programming languages can be viewed as elaborations on the lambda calculus.
+
+//In practice, the difference between a mathematical function and the notion of a "function" used in imperative programming is that imperative functions can have side effects, changing the value of program state. Because of this, they lack referential transparency, i.e. the same language expression can result in different values at different times depending on the state of the executing program. Conversely, in functional code, the output value of a function depends only on the arguments that are input to the function, so calling a function f twice with the same value for an argument x will produce the same result f(x) both times. Eliminating side effects can make it much easier to understand and predict the behavior of a program, which is one of the key motivations for the development of functional programming.
 ///
 /// When subclassing RACStream, only the methods in the main @interface body need
 /// to be overridden.
@@ -71,6 +74,7 @@ typedef RACStream * _Nullable (^RACStreamBindBlock)(ValueType _Nullable value, B
 - (__kindof RACStream *)zipWith:(RACStream *)stream;
 
 @end
+
 
 /// This extension contains functionality to support naming streams for
 /// debugging.
